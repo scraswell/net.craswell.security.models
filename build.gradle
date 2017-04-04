@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 repositories {
     jcenter()
@@ -7,8 +8,13 @@ repositories {
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'com.squareup:javapoet:1.8.0'
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.8.Final'
+
     testCompile 'junit:junit:4.12'
 
-    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
-	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.8.Final'
+    compile project(':net.craswell.common')
+    compile project(':net.craswell.common.models')
+    compile project(':net.craswell.common.codegen')
+    compile project(':net.craswell.security.annotations')
 }

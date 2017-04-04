@@ -38,3 +38,6 @@ build/
 bin/
 gradlew
 gradlew.bat
+.externalToolBuilders/
+.factoryPath
+*generated/
